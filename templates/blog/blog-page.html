@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="prose">
+  <h1 class="title">
+    {{ page.title }}
+  </h1>
+  <p class="subtitle"><strong>{{ page.date }}</strong></p>
+
+</section>
+<section class="prose">
+  {{ page.content | safe }}
+
+</section>
+{% endblock content %}

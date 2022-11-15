@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="text-3xl">
+    A gallery of my beautiful art
+</h1>
+<section class="prose">
+    {{ page.content | safe }}
+  </section>
+
+{% endblock content %}

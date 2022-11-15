@@ -1,0 +1,8 @@
+<div class="grid grid-cols-3 gap-4">
+  {% for asset in page.assets -%} {%- if asset is matching("[.](jpg|png)$") -%}
+  {% set image = resize_image(path=asset, width=240, height=240, op="fill") %}
+  <a href="{{ get_url(path=asset) }}" target="_blank">
+    <img src="{{ image.url }}" class="mt-0 mb-0" />
+  </a>
+  {%- endif %} {%- endfor %}
+</div>

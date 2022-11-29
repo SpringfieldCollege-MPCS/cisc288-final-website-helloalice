@@ -14,3 +14,9 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+menuitem = {
+    home = "$BASE_URL/",
+    commissions = "$BASE_URL/commissions",
+    about = "$BASE_URL/about",
+    contact = "$BASE_URL/contact"
+}

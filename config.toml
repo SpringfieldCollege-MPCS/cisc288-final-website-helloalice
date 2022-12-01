@@ -18,6 +18,5 @@ menu_items=[
 	{ name = "home", url="$BASE_URL/home"},
 	{ name = "about", url="$BASE_URL/about"},
 	{ name = "commissions", url="$BASE_URL/commissions"},
-	{ name = "contact", url="$BASE_URL/contact"},
-	{ name = "shop", url="$BASE_URL/shop"}
+	{ name = "contact", url="$BASE_URL/contact"}
 ]

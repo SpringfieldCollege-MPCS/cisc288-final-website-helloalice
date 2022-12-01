@@ -1,10 +1,12 @@
 {% import 'macros/header.html' as macros_header -%}
+{% import 'macros/footer.html' as macros_footer -%}
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>MyBlog</title>
   <link rel="stylesheet" href="{{ get_url(path="styles/style.css") }}">
 </head>
@@ -20,6 +22,11 @@
       {% block content %} {% endblock %}
     </div>
   </section>
+
+  {% block footer %}
+    {{ macros_footer::footer() }}
+  {% endblock footer %}
+
 </body>
 
 </html>

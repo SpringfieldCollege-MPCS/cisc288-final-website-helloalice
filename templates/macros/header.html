@@ -1,69 +1,25 @@
 {% macro header() %}
-<header class="bg-slate-600">
-  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
-    <div
-      class="flex w-full items-center justify-between border-b border-indigo-500 py-6 lg:border-none"
-    >
-      <div class="flex items-center">
-        <a href="/">
-          <span class="sr-only">CISC288</span>
-          <img
-            class="h-10 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=white"
-            alt=""
-          />
-        </a>
-        <div class="ml-10 hidden space-x-8 lg:block">
-          <a
-            href="/blog"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Blog</a
-          >
-
-          <a
-            href="/testimonial"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Testimonials</a
-          >
-
-          <a
-            href="/art"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Art</a
-          >
-
-          <a
-            href="#"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Articles</a
-          >
-
-
-        </div>
+<header class="bg-[#D9D9D9]">
+  <div class="md:container md:mx-auto  ">
+    <nav class=" flex flex-row justify-between items-center">
+      <div class="flex cursor-pointer justify-center align-middle py-4 bg-[#D9D9D9] w-1/3 text-black">
+        LOGO
       </div>
-      <div class="ml-10 space-x-4">
-        <!-- <a
-          href="#"
-          class="inline-block rounded-md border border-transparent bg-slate-500 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
-          >Join</a
-        > -->
-        <a
-          href="#"
-          class="inline-block rounded-md border border-transparent bg-white py-2 px-4 text-base font-medium text-slate-600 hover:bg-indigo-50"
-          >Join</a
-        >
+      <div class="flex justify-between place-content-start gap-16">
+        {% for menu in config.extra.menu_items %}
+          {% set link_url = menu.url | replace(from='BASEURL', to=config.base_url) %}
+          {% set normal_class = "px-6 bg-white border" %}
+          {% set active_class = "px-6 bg-[#D9D9D9] border border-black" %}
+          <a {% if current_url and current_url is starting_with(link_url) %}
+            class="{{active_class}}"
+            {% else %}
+              class="{{normal_class}}"
+            {% endif %} href="{{link_url}}">{{menu.name}}</a>
+        {% endfor %}
       </div>
-    </div>
-    <!-- <div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Solutions</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Pricing</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Docs</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Company</a>
-      </div> -->
-  </nav>
+      <div class="flex justify-between place-items-start">
+        <a href="#" class="px-2 border">Shop</a>
+      </div>
+    </nav>
 </header>
-
 {% endmacro %}

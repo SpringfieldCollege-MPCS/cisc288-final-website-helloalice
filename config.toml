@@ -15,7 +15,7 @@ highlight_code = true
 [extra]
 # Put all your custom variables here
 menu_items=[
-	{ name = "home", url="$BASE_URL/home"},
+	{ name = "home", url="$BASE_URL/"},
 	{ name = "about", url="$BASE_URL/about"},
 	{ name = "commissions", url="$BASE_URL/commissions"},
 	{ name = "contact", url="$BASE_URL/contact"}

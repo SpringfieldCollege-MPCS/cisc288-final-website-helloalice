@@ -12,3 +12,11 @@
 	    @apply text-base font-medium text-white hover:text-indigo-50;
 	}
 }
+
+@layer base{
+
+
+	html {
+		@apply font-customCairo;
+	}
+}

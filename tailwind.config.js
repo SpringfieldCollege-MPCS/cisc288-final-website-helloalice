@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./templates/**/*.html", "./theme/**/*.html",  "./themes/"],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        'customCairo':['Cairo','sans-serif']
+      }
+    }
   },
   variants: {},
   plugins: [

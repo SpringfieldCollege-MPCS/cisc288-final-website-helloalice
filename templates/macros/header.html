@@ -9,7 +9,7 @@
       <div class="flex justify-between place-content-start gap-16">
         {% for menu in config.extra.menu_items %}
           {% set link_url = menu.url | replace(from="$BASE_URL", to=config.base_url) %}
-          {% set normal_class = "px-6 bg-white " %}
+          {% set normal_class = "px-6" %}
           {% set active_class = "px-6 bg-[#D9D9D9]" %}
           <a {% if current_url and current_url is starting_with(link_url) %}
             class="{{active_class}}"

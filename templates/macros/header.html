@@ -6,7 +6,7 @@
         {% set image = resize_image(path='content/logo.png', height=80, width=80, op="fill") %}
         <img src="{{ image.url }}" />
       </div>
-      <div class="flex justify-between place-content-start gap-16">
+      <div class="flex font-customCabin text-[16px] justify-between place-content-start gap-16">
         {% for menu in config.extra.menu_items %}
           {% set link_url = menu.url | replace(from="$BASE_URL", to=config.base_url) %}
           {% set normal_class = "px-6 bg-white" %}

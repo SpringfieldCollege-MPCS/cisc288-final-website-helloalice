@@ -4,7 +4,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'customCairo':['Cairo','sans-serif']
+        'customCairo':['Cairo','sans-serif'],
+        'customCabin':['Cabin','sans-serif'],
+        'customAbril':['Abril Fatface','sans-serif'],
+        'customKaushan':['Kaushan Script','sans-serif'],
+        'customLobster':['Lobster','sans-serif']
       }
     }
   },

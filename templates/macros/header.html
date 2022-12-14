@@ -11,11 +11,12 @@
           {% set link_url = menu.url | replace(from="$BASE_URL", to=config.base_url) %}
           {% set normal_class = "px-6 bg-white hover:underline hover:underline-offset-8" %}
           {% set active_class = "px-6 underline underline-offset-8 " %}
-          <a {% if current_url and current_url is starting_with(link_url) %}
+          <a {% if current_url and current_url == link_url %}
             class="{{active_class}}"
             {% else %}
               class="{{normal_class}}"
-            {% endif %} href="{{link_url}}">{{menu.name| upper}}</a>
+            {% endif %} 
+            href="{{link_url}}">{{menu.name| upper}}</a>
         {% endfor %}
       </div>
       <div class="flex justify-between place-items-start">

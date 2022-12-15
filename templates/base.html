@@ -9,6 +9,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Hello Alice</title>
   <link rel="stylesheet" href="{{ get_url(path="styles/style.css") }}">
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <script>
+    //entry.853001137=NAME&entry.956679658=NAME&entry.1587458589=EMAIL&entry.287059056=MESSAGE
+    const FORM_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSd-XXpnX-geT2THLi_qyGK8xeqHeE6Vp8Z_Qc9NhbDSW8maTw/formResponse";
+    const FIRST_NAME = "entry.853001137";
+    const LAST_NAME = "entry.956679658";
+    const EMAIL = "entry.1587458589";
+    const MESSAGE = "entry.287059056";
+    function submitForm(formData) {
+      console.log(
+        `Received - firstname: ${formData.firstname}; lastname: ${formData.lastname}; email: ${formData.email}; message: ${formData.message}`
+      );
+      console.log("Preparing to submit data to the Google Form");
+
+      // collecting all data into an object
+      const formDetails = {};
+      formDetails[FIRST_NAME] = formData.firstname;
+      formDetails[LAST_NAME] = formData.lastname;
+      formDetails[EMAIL] = formData.email;
+      formDetails[MESSAGE] = formData.message;
+      // convert the javascript formDetails object to URL string for POST request
+      const formBodyString = new URLSearchParams(formDetails).toString();
+      // uncomment to see the url encoded string
+      console.log(formBodyString)
+
+      // posting data to our google form
+      fetch(FORM_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        mode: "no-cors",
+        body: formBodyString,
+      }).then(() => {
+        console.log("Success!");
+        // show message
+        formData.showMessage = true;
+        formData.firstname = '';
+        formData.lastname = '';
+        formData.email = '';
+        formData.message = '';
+          // remove message in 2 seconds
+        setTimeout(() => formData.showMessage = false, 2000);
+      });
+    }
+  </script>
 </head>
 
 <body>

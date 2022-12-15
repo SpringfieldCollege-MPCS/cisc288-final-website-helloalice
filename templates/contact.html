@@ -3,7 +3,7 @@
 {% block content %}
 <section class="prose">
 	<main class="w-screen -ml-8 -my-8">
-		<div class=" bg-[#D9D9D9] grid grid-cols-2 justify-between items-center">
+		<div class=" bg-[#EAD490] grid grid-cols-2 justify-between items-center">
 			<div class=" p-20 flex flex-col">
 				<p class="font-semibold pb-4 text-2xl ">How does this work?</p>
 				<ul class="pb-20 gap-2 ">
@@ -19,30 +19,89 @@
 			<div class="place-content-center grid grid-cols-4 justify-between items-center ">
 				
 				<div class="py-28 col-start-2 col-span-2">
-					<img src="https://via.placeholder.com/442x487.png">
+					{% set image = resize_image(path='content/contact/BRB.jpg', height=180, width=160, op="fill") %}
+       					<img src="{{ image.url }}" />
 				</div>
 			</div>
 			
 		</div>
 		<div class=" grid grid-cols-2 justify-between items-center">
-			<div class="bg-[#D9D9D9] gap-6 flex flex-col justify-between place-content-center items-center">
+			<div class="bg-[#98CFB7] gap-6 flex flex-col justify-between place-content-center items-center">
 				<div class="pt-56">
-					<img src="https://via.placeholder.com/467x468.png" class="border rounded-full">
+					{% set image = resize_image(path='content/contact/Resist.jpg', height=180, width=160, op="fill") %}
+       					<img src="{{ image.url }}" />
 				</div>
-				<p class="">interested in keeping up with the latest from Hello Alice?</p>
+				<p class="font-customCairo text-italic italic text-[16px]">interested in keeping up with the latest from Hello Alice?</p>
 				<div class="pb-56">
-					<div class="text-center self-center border rounded-lg py-1 w-44 bg-white ">Subscribe to the Newsletter</div>
+					<div class="text-center self-center border rounded-lg py-1 w-44 bg-white"><a href="/newsletter/">Subscribe to the Newsletter</a></div>
 				</div>
 			</div>
-			<div class="grid px-24 grid-cols-2 gap-8 justify-between  items-center">
-				<div class="col-span-2 px-2">CONTACT ME</div>
+			<div class="px-24 justify-between items-center">
+				<section
+				x-data="{
+					firstname: '',
+					lastname: '',
+					email: '',
+					message: '',
+					showMessage: false
+				}">
+
+					<h2 class="px-2 text-[#DEC84E] font-customAbril">CONTACT ME</h2>
+					<form class="grid grid-cols-2 gap-8"
+					@submit.prevent="submitForm($data)">
+						<label class="block px-3 py-2 border-2 border-[#DEC84E] rounded-lg">
+							<span class="text-[#DEC84E] font-customCairo">First Name</span>
+							<input type="text"
+							class="form-input mt-1 block w-full rounded-lg"
+							name="form-firstname"
+							required
+							x-model="firstname"
+							placeholder=" Name"/>
+						</label>
+						<label class="block px-3 py-2 border-2 border-[#DEC84E] rounded-lg">
+							<span class="text-[#DEC84E] font-customCairo">Last Name</span>
+							<input type="text"
+							class="form-input mt-1 block w-full rounded-lg"
+							name="form-lastname"
+							required
+							x-model="lastname"
+							placeholder=" Name"/>
+						</label>
+						<label class="block col-span-2 px-3 py-2 border-2 border-[#DEC84E] rounded-lg">
+							<span class="text-[#DEC84E] font-customCairo">Email</span>
+							<input type="text"
+							class="form-input mt-1 block w-full rounded-lg"
+							name="form-email"
+							required
+							x-model="email"
+							placeholder=" Email"/>
+						</label>
+						<label class="block col-span-2 px-3 py-2 border-2 border-[#DEC84E] rounded-lg">
+							<span class="text-[#DEC84E] font-customCairo">Message</span>
+							<textarea
+              				class="form-textarea mt-1 block w-full h-24 rounded-lg"
+              				rows="3"
+              				name="form-message"
+              				required
+              				x-model="message"
+              				placeholder=" Enter message here."
+            				></textarea>
+						</label>
+						<div class="col-span-2 grid justify-items-center">
+							<button class="border-2 border-[#98CFB7] hover:bg-[#D9D9D9] text-[#98CFB7] font-customCairo w-32 p-2 rounded-lg">Submit</button>
+						</div>
+					</form>
+					
+				</section>
+
+				<!-- <div class="col-span-2 px-2">CONTACT ME</div>
 				<div class="px-3  py-2 bg-[#D9D9D9]">first Name</div>
 				<div class="px-3 py-2 bg-[#D9D9D9]">last  Name</div>
 				<div class="px-3 py-2 col-span-2 bg-[#D9D9D9]">email</div>
 				<div class="px-3 py-2 pb-14 col-span-2  bg-[#D9D9D9]">
 					<p>type message..</p>
 				</div>
-				<div class=" text-center bg-[#D9D9D9] border  w-44 p-3 ">Send</div>
+				<div class=" text-center bg-[#D9D9D9] border  w-44 p-3 ">Send</div> -->
 			</div>
 		</div>
 	</main>

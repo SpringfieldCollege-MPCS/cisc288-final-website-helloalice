@@ -2,7 +2,7 @@
 <header class="bg-white">
   <div class="md:container md:mx-auto  ">
     <nav class=" flex flex-row justify-between items-center">
-      <div class="flex cursor-pointer justify-center align-middle py-4 bg-white w-1/3 text-black">
+      <div class="flex cursor-pointer justify-center align-middle py-4 w-1/3 text-black">
         {% set image = resize_image(path='content/logo.png', height=180, width=160, op="fill") %}
         <img src="{{ image.url }}" />
       </div>

@@ -1,17 +1,44 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="prose">
-	<main>
-		<div class= " pt-20 flex flex-col justify-between gap-8  items-center">
-			<p class="text-6xl">Subscribe to the Newsletter</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
+<section class="prose justify-items-center">
+	<main class="w-screen -ml-28 justify-items-center">
+		<div class="grid grid-cols-1 gap-8 w-full justify-items-center pl-28">
+			<div class= "pt-20 flex flex-col leading-[20px] justify-between gap-8 items-center">
+				<p class="font-customAbril text-[#98CFB7] text-[48px] font-semibold text-6xl">Subscribe to the Newsletter</p>
+				<p class="font-customCabin text-[16px] italic">Keep up with all things Hello Alice, such as shop updates, pop-up booths, and more!</p>
+			</div>
+			<section
+			x-data="{
+				name: '',
+				email: '',
+				showMessage: false
+			}">
+				<form class="grid grid-cols-4 gap-6"
+				@submit.prevent="submitNewsForm($data)">
+					<label class="block px-3 py-2 border-2 border-[#DEC84E] rounded-lg">
+						<input type="text"
+						class="form-input mt-1 block w-full rounded-lg"
+						name="form-name"
+						required
+						x-model="name"
+						placeholder=" Name"/>
+					</label>
+					<label class="block col-span-2 px-3 py-2 border-2 border-[#DEC84E] rounded-lg">
+						<input type="text"
+						class="form-input mt-1 block w-full rounded-lg"
+						name="form-email"
+						required
+						x-model="email"
+						placeholder=" Email"/>
+					</label>
+					<div class="grid justify-items-center">
+						<button class="border-2 border-[#98CFB7] hover:bg-[#D9D9D9] text-[#98CFB7] italic  font-customCairo w-32 p-2 rounded-lg">SUBSCRIBE</button>
+					</div>
+				</form>
+					
+			</section>
 		</div>
-		<div class=" mx-28 pb-56 py-20 gap-14 grid  content-center grid-cols-4">
-			<div class=" bg-[#D9D9D9] p-2 ">name</div>
-			<div class="col-span-2 bg-[#D9D9D9] p-2 ">email</div>
-			<div class="bg-[#D9D9D9] p-2 ">subscribe</div>
-		</div> 
 	</main>	
 </section>
 {% endblock content %}

@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./templates/**/*.html", "./theme/**/*.html",  "./themes/"],
+  content: ["./templates/**/*.html", "./theme/**/*.html",  "./themes/", "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero': "url('content/commissions/GridBanner.jpg')"
+      },
       fontFamily: {
         'customCairo': ['Cairo', 'sans-serif'],
         'customCabin': ['Cabin', 'sans-serif'],
@@ -15,5 +18,6 @@ module.exports = {
   variants: {},
   plugins: [
       require('@tailwindcss/typography'),
+      require('flowbite/plugin'),
   ],
 };

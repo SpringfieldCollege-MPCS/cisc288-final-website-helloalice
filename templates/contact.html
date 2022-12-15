@@ -2,38 +2,38 @@
 
 {% block content %}
 <section class="prose">
-	<main class="w-screen -ml-8 -my-8">
-		<div class=" bg-[#EAD490] grid grid-cols-2 justify-between items-center">
-			<div class=" p-20 flex flex-col">
-				<p class="font-semibold pb-4 text-2xl ">How does this work?</p>
-				<ul class="pb-20 gap-2 ">
-					<li>1. Look through my commissions section to get familiar with my style</li>
-					<li>2. Contact me with the form below with what you’re thinking - I’ll reach back out via email</li>
-					<li>3. We’ll talk about your project and I’ll get you a quote!</li>
-				</ul>
-				<p class="pb-4 font-semibold text-2xl">Shop With Me On Faire</p>
-				<ul>
-					<li>Are you a retailer looking to purchase items for wholesale? Check me out on FAIRE</li>
-				</ul>
+	<main class="w-screen -ml-8 -my-8 text-[#606169]">
+		<div class=" bg-[#EAD490] grid grid-cols-2">
+			<div class="p-20 grid grid-cols">
+				<p class="font-semibold font-customAbril text-[#606169] text-[24px]">How does this work?</p>
+				<p class="text-[#606169] font-customCairo text-[16px]">
+					<p>1. Look through my commissions section to get familiar with my style</p>
+					<p>2. Contact me with the form below with what you’re thinking - I’ll reach back out via email</p>
+					<p>3. We’ll talk about your project and I’ll get you a quote!</p>
+				</p>
+				<p class=" text-[#606169] font-semibold font-customAbril text-[24px]">Shop With Me On Faire</p>
+				<p>
+					<p class=" text-[#606169] font-customCairo text-[16px]">Are you a retailer looking to purchase items for wholesale? Check me out on FAIRE</p>
+				</p>
 			</div>
 			<div class="place-content-center grid grid-cols-4 justify-between items-center ">
 				
 				<div class="py-28 col-start-2 col-span-2">
-					{% set image = resize_image(path='content/contact/BRB.jpg', height=180, width=160, op="fill") %}
+					{% set image = resize_image(path='content/contact/BRB.jpg', height=487, width=442, op="fill") %}
        					<img src="{{ image.url }}" />
 				</div>
 			</div>
 			
 		</div>
-		<div class=" grid grid-cols-2 justify-between items-center">
-			<div class="bg-[#98CFB7] gap-6 flex flex-col justify-between place-content-center items-center">
-				<div class="pt-56">
-					{% set image = resize_image(path='content/contact/Resist.jpg', height=180, width=160, op="fill") %}
-       					<img src="{{ image.url }}" />
+		<div class=" grid grid-cols-2 items-center">
+			<div class="bg-[#98CFB7] gap-6 flex flex-col place-content-center items-center">
+				<div class="pt-56 overflow-hidden over">
+					{% set image = resize_image(path='content/contact/Resist.jpg', height=568, width=567, op="fill") %}
+       					<img src="{{ image.url }}" class="border rounded-full"/>
 				</div>
 				<p class="font-customCabin italic text-[16px]">interested in keeping up with the latest from Hello Alice?</p>
 				<div class="pb-56">
-					<div class="text-center self-center py-1 w-44 font-customCabin italic text-[16px]"><a href="/newsletter/">Subscribe to the Newsletter</a></div>
+					<div class="text-center self-center font-customCabin italic text-[16px]"><a href="/newsletter/" class="text-[#606169]">Subscribe to the Newsletter</a></div>
 				</div>
 			</div>
 			<div class="px-24 justify-between items-center">

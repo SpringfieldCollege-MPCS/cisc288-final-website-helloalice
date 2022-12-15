@@ -3,11 +3,10 @@
 	<div class="grid grid-cols-3">
 		<div class="text-white content-center">
 			<ul class="flex font-customCabin text-[14px] flex-col place-content-evenly justify-between gap-y-2 mx-40 m-12">
-			<li>HOME</li>
-			<li>PORTFOLIO</li>
-			<li>ABOUT</li>
-			<li>CONTACT</li>
-			<li>SHOP</li>
+			{% for menu in config.extra.menu_items %}
+				{% set link_url = menu.url | replace(from="$BASE_URL", to=config.base_url) %}	
+				<li><a href="{{link_url}}">{{menu.name | upper}}</a></li>
+			{% endfor %}	
 			</ul>
 		</div>
 		<div class="flex m-16 flex-col content-center text-center  h-28 w-28">

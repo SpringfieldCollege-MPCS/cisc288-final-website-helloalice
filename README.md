@@ -27,8 +27,8 @@ base.html<br>
 index.html<br>
 about.html<br>
 contact.html<br><br>
+
 header if statement for newsletter<br>
-form data responses<br>
 stretch div to overlap header<br>
 shop dropdown menu<br>
 ask for links to put in<br>

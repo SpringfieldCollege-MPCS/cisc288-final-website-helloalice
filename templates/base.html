@@ -101,21 +101,20 @@
 
 <body>
 
-  {% block header %}
-    {{ macros_header::header() }}
-  {% endblock header %}
-
   <section>
-    <div class="container max-w-7xl p-8">
+    <div class="relative container mx-auto pt-8 px-8 overflow-visible">
+      {% block header %}
+        {{ macros_header::header() }}
+      {% endblock header %}
+
       {% block content %} {% endblock %}
+      
+      {% block footer %}
+        {{ macros_footer::footer() }}
+      {% endblock footer %}
     </div>
   </section>
 
-  {% block footer %}
-    {{ macros_footer::footer() }}
-  {% endblock footer %}
-  
-  <script src="{{ get_url(path="javascript/spotlight.bundle.js") }}" defer></script>
 </body>
 
 </html>

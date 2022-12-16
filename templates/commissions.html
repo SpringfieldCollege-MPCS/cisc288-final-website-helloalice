@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="prose">
-	<main class="w-screen -ml-28 -my-8">
-		<section class=" bg-cover bg-hero h-72 self-center mt-48">
+<main class="w-screen -ml-28 -my-8">
+	<section class=" bg-cover bg-hero h-72 self-center mt-48">
 
-		</section>
-		<div class=" mx-auto w-1/3 h-4/5 -mt-[500px]">
-		    <div class="grid grid-flow-dense  grid-cols-4">
+	</section>
+	<div class=" mx-auto w-1/3 h-4/5 -mt-[500px]">
+		<div class="grid grid-flow-dense  grid-cols-4">
 			<div class="flex items-center justify-center row-span-2 col-span-2 border border-black ">
 				{% set image = resize_image(path='content/commissions/Antonio_s.jpg', height=324, width=350, op="fill") %}
        				<img src="{{ image.url }}" />
@@ -50,6 +49,8 @@
 			</div>
 		    </div>
 		</div>
+		<div class="bg ">
+
+		</div>
 	    </main>
-</section>
 {% endblock context %}

@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="prose">
-	<main class="w-screen -ml-8 -my-8 text-[#606169]">
+	<main class="full-width -my-8 text-[#606169]">
 		<div class=" bg-[#EAD490] grid grid-cols-2">
-			<div class="p-20 grid grid-cols">
+			<div class="p-20 grid grid-cols  place-content-center gap-2 justify-center">
 				<p class="font-semibold font-customAbril text-[#606169] text-[24px]">How does this work?</p>
 				<p class="text-[#606169] font-customCairo text-[16px]">
-					<p>1. Look through my commissions section to get familiar with my style</p>
-					<p>2. Contact me with the form below with what you’re thinking - I’ll reach back out via email</p>
-					<p>3. We’ll talk about your project and I’ll get you a quote!</p>
+					<p class="leading-[40px]">1. Look through my commissions section to get familiar with my style<br>
+					2. Contact me with the form below with what you’re thinking - I’ll reach back out via email<br>
+					3. We’ll talk about your project and I’ll get you a quote!</p>
 				</p>
 				<p class=" text-[#606169] font-semibold font-customAbril text-[24px]">Shop With Me On Faire</p>
 				<p>
@@ -33,7 +32,7 @@
 				</div>
 				<p class="font-customCabin italic text-[16px]">interested in keeping up with the latest from Hello Alice?</p>
 				<div class="pb-56">
-					<div class="text-center self-center font-customCabin italic text-[16px]"><a href="/newsletter/" class="text-[#606169]">Subscribe to the Newsletter</a></div>
+					<div class="text-center self-center font-customCabin italic underline text-[16px]"><a href="/newsletter/" class="text-[#606169]">Subscribe to the Newsletter</a></div>
 				</div>
 			</div>
 			<div class="px-24 justify-between items-center">
@@ -93,17 +92,8 @@
 					</form>
 					
 				</section>
-
-				<!-- <div class="col-span-2 px-2">CONTACT ME</div>
-				<div class="px-3  py-2 bg-[#D9D9D9]">first Name</div>
-				<div class="px-3 py-2 bg-[#D9D9D9]">last  Name</div>
-				<div class="px-3 py-2 col-span-2 bg-[#D9D9D9]">email</div>
-				<div class="px-3 py-2 pb-14 col-span-2  bg-[#D9D9D9]">
-					<p>type message..</p>
-				</div>
-				<div class=" text-center bg-[#D9D9D9] border  w-44 p-3 ">Send</div> -->
 			</div>
 		</div>
 	</main>
-</section>
+
 {% endblock content%}

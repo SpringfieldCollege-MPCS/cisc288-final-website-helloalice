@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero': "url('content/commissions/GridBanner.jpg')"
+        'hero': "url('/images/GridBanner.jpg')"
       },
       fontFamily: {
         'customCairo': ['Cairo', 'sans-serif'],

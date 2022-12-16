@@ -39,16 +39,18 @@ class=""
     </nav>
   </div>
 
-  <div x-show="open" class="bg-white left-0 top-0 fixed w-screen h-screen z-10">
-    <div class="flex flex-col space-y-4 justify-center items-center">
-
-      <div @click="open = false">X</div>
-      <div>1</div>
-
-      <div>1</div>
-
-      <div>1</div>
-
+  <div x-show="open" class="bg-white bg-opacity-80 drop-shadow-lg left-0 top-0 fixed w-screen h-screen z-10">
+    <div class="flex flex-col space-y-4 justify-center items-end">
+      <br><br><br>
+      <div @click="open = false" class="cursor-pointer rounded-full bg-[#fd9b9b] px-2 mx-5 drop-shadow-lg font-customCabin">X</div>
+      <hr>
+      <div class="bg-[#98CFB7] py-2 px-8 mx-5 rounded-full drop-shadow-lg font-customCabin"><a href="{{config.base_url}}" class="text-[#606169]">Home</a></div>
+      <hr>
+      <div class="bg-[#98CFB7] py-2 px-8 mx-5 rounded-full drop-shadow-lg font-customCabin"><a href="{{config.base_url}}/about/" class="text-[#606169]">About</a></div>
+      <hr>
+      <div class="bg-[#98CFB7] py-2 px-8 mx-5 rounded-full drop-shadow-lg font-customCabin"><a href="{{config.base_url}}/commissions/" class="text-[#606169]">Commissions</a></div>
+      <hr>
+      <div class="bg-[#98CFB7] py-2 px-8 mx-5 rounded-full drop-shadow-lg font-customCabin"><a href="{{config.base_url}}/contact/" class="text-[#606169]">Contact</a></div>
     </div>
 
   </div>

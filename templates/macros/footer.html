@@ -1,6 +1,6 @@
 {% macro footer() %}
-<footer class="bg-[#98CFB7]">
-	<div class="grid grid-cols-3">
+<footer class="bg-[#98CFB7] full-width">
+	<div class="grid grid-cols-3 container mx-auto">
 		<div class="text-white content-center">
 			<ul class="flex font-customCabin text-[14px] flex-col place-content-evenly justify-between gap-y-2 mx-40 m-12">
 			{% for menu in config.extra.menu_items %}
@@ -11,17 +11,17 @@
 		</div>
 		<div class="flex m-16 flex-col content-center text-center  h-28 w-28">
 			{% set image = resize_image(path='content/logo.png', height=180, width=160, op="fill") %}
-        <img src="{{ image.url }}" />
+       			<img src="{{ image.url }}" />
 		</div>
 		<div class=" m-12 flex flex-col font-customCairo text-[16px] text-white place-content-start">
 			<p class="text-center"> Stay connected on Social Media</p>	
 			<div class="grid grid-cols-3 m-5  justify-items-center">
-			<div class="border border-lg w-12 h-12 bg-white">
+			
 				<a href="https://www.facebook.com/HelloAliceCrafts" role="button">
 					<!-- Facebook -->
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-7 h-7" style="color: #1877f2;"><--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+					<svg class="w-12 h-12" style="fill:white;" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
 				</a>
-			</div>
+		
 			<div class="border border-lg w-12 h-12 bg-white">
 				<a href="https://www.instagram.com/_hello.alice_/" role="button">
 					<!-- Instagram -->

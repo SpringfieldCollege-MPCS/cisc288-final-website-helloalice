@@ -2,40 +2,40 @@
 
 {% block content %}
 	<main class="full-width -my-8 text-[#606169]">
-		<div class=" bg-[#EAD490] grid grid-cols-2">
-			<div class="p-20 grid grid-cols  place-content-center gap-2 justify-center">
+		<div class=" bg-[#EAD490] grid grid-cols-1 md:grid-cols-2">
+			<div class="p-8 md:p-20 flex flex-col  place-content-center gap-1 md:gap-2 justify-center">
 				<p class="font-semibold font-customAbril text-[#606169] text-[24px]">How does this work?</p>
 				<p class="text-[#606169] font-customCairo text-[16px]">
 					<p class="leading-[40px]">1. Look through my commissions section to get familiar with my style<br>
 					2. Contact me with the form below with what you’re thinking - I’ll reach back out via email<br>
 					3. We’ll talk about your project and I’ll get you a quote!</p>
 				</p>
-				<p class=" text-[#606169] font-semibold font-customAbril text-[24px]">Shop With Me On Faire</p>
+				<p class=" text-[#606169] font-semibold font-customAbril text-[24px]">Shop With Me On FAIRE</a></p>
 				<p>
-					<p class=" text-[#606169] font-customCairo text-[16px]">Are you a retailer looking to purchase items for wholesale? Check me out on FAIRE</p>
+					<p class=" text-[#606169] font-customCairo text-[16px]">Are you a retailer looking to purchase items for wholesale? Check me out on <a href="https://www.faire.com/brand/b_ya5xebaxz9" class="italic underline cursor-pointer" target="_blank">FAIRE</a></p>
 				</p>
 			</div>
 			<div class="place-content-center grid grid-cols-4 justify-between items-center ">
 				
-				<div class="py-28 col-start-2 col-span-2">
-					{% set image = resize_image(path='content/contact/BRB.jpg', height=487, width=442, op="fill") %}
+				<div class="py-12 md:py-28 col-start-2 col-span-2">
+					{% set image = resize_image(path='content/contact/BRB.jpg', height=487, width=442, op="scale") %}
        					<img src="{{ image.url }}" />
 				</div>
 			</div>
 			
 		</div>
-		<div class=" grid grid-cols-2 items-center">
+		<div class=" grid grid-cols-1 md:grid-cols-2 items-center">
 			<div class="bg-[#98CFB7] gap-6 flex flex-col place-content-center items-center">
-				<div class="pt-56 overflow-hidden over">
-					{% set image = resize_image(path='content/contact/Resist.jpg', height=568, width=567, op="fill") %}
+				<div class="pt-24 md:pt-56 overflow-hidden over">
+					{% set image = resize_image(path='content/contact/Resist.jpg', height=468, width=467, op="scale") %}
        					<img src="{{ image.url }}" class="border rounded-full"/>
 				</div>
 				<p class="font-customCabin italic text-[16px]">interested in keeping up with the latest from Hello Alice?</p>
-				<div class="pb-56">
+				<div class="pb-24 md:pb-56">
 					<div class="text-center self-center font-customCabin italic underline text-[16px]"><a href="/newsletter/" class="text-[#606169]">Subscribe to the Newsletter</a></div>
 				</div>
 			</div>
-			<div class="px-24 justify-between items-center">
+			<div class=" px-12 md:px-24 justify-between items-center">
 				<section
 				x-data="{
 					firstname: '',
@@ -78,16 +78,16 @@
 						<label class="block col-span-2 px-3 py-2 border-2 border-[#DEC84E] rounded-lg">
 							<span class="text-[#DEC84E] font-customCairo">Message</span>
 							<textarea
-              				class="form-textarea mt-1 block w-full h-24 rounded-lg"
-              				rows="3"
-              				name="form-message"
-              				required
-              				x-model="message"
-              				placeholder="type message.."
-            				></textarea>
+								class="form-textarea mt-1 block w-full h-24 rounded-lg"
+								rows="3"
+								name="form-message"
+								required
+								x-model="message"
+								placeholder="type message.."
+							></textarea>
 						</label>
-						<div class="col-span-2 grid justify-items-center">
-							<button class="border-2 border-[#98CFB7] hover:bg-[#D9D9D9] text-[#98CFB7] font-customCairo w-32 p-2 rounded-lg">Submit</button>
+						<div class="col-span-2  grid justify-items-center">
+							<button class="border-2 border-[#98CFB7] hover:bg-[#D9D9D9] text-[#98CFB7] font-customCairo w-32 pb-24 md:pb-2 p-2 rounded-lg">Submit</button>
 						</div>
 					</form>
 					

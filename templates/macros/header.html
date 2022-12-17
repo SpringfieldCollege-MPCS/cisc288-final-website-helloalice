@@ -7,7 +7,7 @@ class=""
 {% endif %} x-data="{
   open: false
 }">
-  <div class="md:container text-[#606169] md:mx-auto  ">
+  <div class="md:container text-[#606169] md:mx-auto">
     <nav class=" flex flex-row justify-between items-center pr-4">
       <div class="flex cursor-pointer justify-center align-middle py-4 w-1/3 text-black">
         <a href="{{ config.base_url }}">
@@ -39,9 +39,9 @@ class=""
     </nav>
   </div>
 
-  <div x-show="open" class="bg-white bg-opacity-80 drop-shadow-lg left-0 top-0 fixed w-screen h-screen z-10">
+  <div x-show="open" class="bg-white bg-opacity-80 drop-shadow-lg right-0 top-0 fixed w-1/2 h-screen z-10">
     <div class="flex flex-col space-y-4 justify-center items-end">
-      <br><br><br>
+      <br>
       <div @click="open = false" class="cursor-pointer rounded-full bg-[#fd9b9b] px-2 mx-5 drop-shadow-lg font-customCabin">X</div>
       <hr>
       <div class="bg-[#98CFB7] py-2 px-8 mx-5 rounded-full drop-shadow-lg font-customCabin"><a href="{{config.base_url}}" class="text-[#606169]">Home</a></div>

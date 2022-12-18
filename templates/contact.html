@@ -26,8 +26,12 @@
 		</div>
 		<div class=" grid grid-cols-1 md:grid-cols-2 items-center">
 			<div class="bg-[#98CFB7] gap-6 flex flex-col place-content-center items-center">
-				<div class="pt-24 md:pt-56 overflow-hidden over">
+				<div class="hidden pt-24 md:pt-56 overflow-hidden ">
 					{% set image = resize_image(path='content/contact/Resist.jpg', height=468, width=467, op="scale") %}
+       					<img src="{{ image.url }}" class="border rounded-full"/>
+				</div>
+				<div class="md:hidden pt-24 md:pt-56 overflow-hidden ">
+					{% set image = resize_image(path='content/contact/Resist.jpg', height=268, width=267, op="scale") %}
        					<img src="{{ image.url }}" class="border rounded-full"/>
 				</div>
 				<p class="font-customCabin italic text-[16px]">interested in keeping up with the latest from Hello Alice?</p>

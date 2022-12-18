@@ -17,47 +17,47 @@
           <!--         Empty div at large, filled with content when Small -->
           <div class="lg:hidden full-width bg-[#98CFB7] text-4xl text-white h-32 ">
             <div class="text-[#606169] font-customAbril flex justify-center items-center h-full">
-              <p>HELLO ALICE</p>
+                <p>HELLO ALICE</p>
             </div>
         </div>
     </div>
     <div class="lg:w-2/3 pt-12 pb-48 lg:pt-12 min-h-[100vh]">
         <div class="flex  flex-col space-y-16 text-lg items-center">
             <!--             <img src="http://fakeimg.pl/300x300/?text=1" alt=""> -->
-            <div class="flex flex-row justify-center">
+            <div class="flex flex-row items-stretch justify-center">
                 <div class="grid grid-flow-dense grid-cols-3 ">
-                    <div class="flex items-center justify-center bg-blue-200 rounded-tl-lg hover:border-2 hover:border-black active:bg-violet-200 active:text-white">
+                    <div class=" bg-white hover:border-2 hover:rounded-tl-lg hover:border-[#98CFB7] active:text-white">
                         {% set image = resize_image(path='content/index/CoreValues.jpg', height=136, width=146, op="scale") %}
-                            <img src="{{ image.url }}" loading="lazy"/>
+                            <img src="{{ image.url }}" class="rounded-tl-lg " loading="lazy"/>
                     </div>
-                    <div class="flex items-center justify-center bg-blue-400 row-span-2 col-span-2 rounded-tr-lg hover:border-2 hover:border-black active:bg-violet-400 active:text-white">
-                        {% set image = resize_image(path='content/index/Feminist.jpg', height=267, width=285, op="scale") %}
-                            <img src="{{ image.url }}" loading="lazy"/>
+                    <div class=" bg-white row-span-2 col-span-2 hover:rounded-tr-lg hover:border-2  hover:border-[#98CFB7]  active:text-white">
+                        {% set image = resize_image(path='content/index/Feminist.jpg', height=274, width=292, op="scale") %}
+                            <img src="{{ image.url }}" class="rounded-tr-lg" loading="lazy"/>
                     </div>
-                    <div class="flex items-center justify-center bg-blue-300 hover:border-2 hover:border-black active:bg-violet-300 active:text-white">
+                    <div class=" bg-white hover:border-2 hover:border-[#98CFB7]  active:text-white">
                         {% set image = resize_image(path='content/index/Intersectionality.jpg', height=136, width=145, op="scale") %}
                             <img src="{{ image.url }}" loading="lazy"/>
                     </div>
-                    <div class="flex items-center justify-center bg-blue-500 row-span-2 rounded-bl-lg hover:border-2 hover:border-black active:bg-violet-500 active:text-white">
-                        {% set image = resize_image(path='content/index/YouMatter.jpg', height=288, width=136, op="scale") %}
-                            <img src="{{ image.url }}" loading="lazy" />
+                    <div class=" bg-white row-span-2 hover:border-2 hover:rounded-bl-lg hover:border-[#98CFB7] active:text-white">
+                        {% set image = resize_image(path='content/index/YouMatter.jpg', height=300, width=146, op="scale") %}
+                            <img src="{{ image.url }}" class="rounded-bl-lg" loading="lazy" />
                     </div>
-                    <div class="flex items-center justify-center bg-blue-200 hover:border-2 hover:border-black active:bg-violet-200 active:text-white">
-                        {% set image = resize_image(path='content/index/TealBird.jpg', height=136 , width=142, op="scale") %}
+                    <div class=" bg-white hover:border-2 hover:border-[#98CFB7]  active:text-white">
+                        {% set image = resize_image(path='content/index/TealBird.jpg', height=156 , width=145, op="scale") %}
                             <img src="{{ image.url }}" loading="lazy"/>
                     </div>
-                    <div class="flex items-center justify-center bg-blue-600 hover:border-2 hover:border-black active:bg-violet-600 active:text-white">
+                    <div class=" bg-white hover:border-2 hover:border-[#98CFB7] active:text-white">
                         {% set image = resize_image(path='content/index/MagnetClipboard.jpg', height=156, width=145, op="scale") %}
                             <img src="{{ image.url }}" loading="lazy"/>
                     </div>
-                    <div class="flex items-center justify-center bg-blue-700 col-span-2 rounded-br-lg hover:border-2 hover:border-black active:bg-violet-700 active:text-white">
-                        {% set image = resize_image(path='content/index/Perkatory.jpg', height=267, width=285, op="scale") %}
-                            <img src="{{ image.url }}" loading="lazy" />
+                    <div class=" bg-white col-span-2  hover:border-2 hover:rounded-br-lg hover:border-[#98CFB7]  active:text-white">
+                        {% set image = resize_image(path='content/index/Perkatory.jpg', height=146, width=292, op="scale") %}
+                            <img src="{{ image.url }}" class="rounded-br-lg" loading="lazy" />
                     </div>
                 </div>
             </div>
 
-            <div class="my-5 py-4 px-20 lg:px-24 rounded-lg border-4 border-[#DEC84E] hover:border-[#E6C92B] text-2xl text-[#DEC84E] hover:text-[#E6C92B] font-customCabin font-semibold italic">
+            <div class="my-5 py-4 px-20 lg:px-24 rounded-lg border-4 border-[#DEC84E] hover:bg-slate-50  hover:border-[#E6C92B] text-2xl text-[#DEC84E] hover:text-[#E6C92B] font-customCabin font-semibold italic">
                 <a href="https://www.etsy.com/shop/HelloAliceShop?ref=seller-platform-mcnav" target="_blank">SHOP FEATURED</a>
             </div>
     

@@ -4,7 +4,8 @@
   "description": "Example Repo of using Zola and Tailwind",
   "scripts": {
     "dev:css": "tailwindcss -i styles/style.css -o static/styles/style.css --watch",
-    "prod:css": "tailwindcss -i styles/style.css -o static/styles/style.css --minify"
+    "prod:css": "tailwindcss -i styles/style.css -o static/styles/style.css --minify",
+    "deploy": "npm run prod:css && zola build && gh-pages -d public"
   },
   "author": "Jeremy Castagno",
   "license": "MIT",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
-    "flowbite": "^1.5.5"
+    "flowbite": "^1.5.5",
+    "gh-pages": "^4.0.0"
   }
 }

@@ -26,12 +26,8 @@
 		</div>
 		<div class=" grid grid-cols-1 md:grid-cols-2 items-center">
 			<div class="bg-[#98CFB7] gap-6 flex flex-col place-content-center items-center">
-				<div class="hidden pt-24 md:pt-56 overflow-hidden ">
+				<div class=" pt-24 md:pt-56 overflow-hidden ">
 					{% set image = resize_image(path='content/contact/Resist.jpg', height=468, width=467, op="scale") %}
-       					<img src="{{ image.url }}" class="border rounded-full"/>
-				</div>
-				<div class="md:hidden pt-24 md:pt-56 overflow-hidden ">
-					{% set image = resize_image(path='content/contact/Resist.jpg', height=268, width=267, op="scale") %}
        					<img src="{{ image.url }}" class="border rounded-full"/>
 				</div>
 				<p class="font-customCabin italic text-[16px]">interested in keeping up with the latest from Hello Alice?</p>
@@ -49,7 +45,7 @@
 					showMessage: false
 				}">
 
-					<h2 class="px-2 text-[#DEC84E] font-customAbril">CONTACT ME</h2>
+					<h2 class="px-2 text-[#DEC84E] md:text-[24px] text-[16px] md:py-4 py-2 font-customAbril">CONTACT ME</h2>
 					<form class="grid grid-cols-2 gap-8"
 					@submit.prevent="submitForm($data)">
 						<label class="block px-3 py-2 border-2 border-[#DEC84E] rounded-lg">

@@ -2,14 +2,14 @@
 <footer class="bg-[#98CFB7] full-width">
 	<div class="grid grid-cols-2 md:grid-cols-3 container mx-auto">
 		<div class="text-white content-center">
-			<ul class="flex font-customCabin text-[14px] flex-col place-content-evenly justify-between gap-y-2 mx-40 m-12">
+			<ul class="flex font-customCabin text-[14px] flex-col place-content-evenly justify-between gap-y-2 md:mx-40 mx-10 m-12">
 			{% for menu in config.extra.menu_items %}
 				{% set link_url = menu.url | replace(from="$BASE_URL", to=config.base_url) %}	
 				<li><a href="{{link_url}}" class="hover:underline">{{menu.name | upper}}</a></li>
 			{% endfor %}	
 			</ul>
 		</div>
-		<div class="flex m-16 flex-col content-center text-center  h-28 w-28">
+		<div class="flex md:m-16 m-8 flex-col content-center text-center  h-28 w-28">
 			<a href="{{config.base_url}}">
 			{% set image = resize_image(path='content/logo.png', height=180, width=160, op="fill") %}
        			<img src="{{ image.url }}" />

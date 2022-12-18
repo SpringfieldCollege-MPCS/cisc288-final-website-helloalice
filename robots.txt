@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://springfieldcollege-mpcs.github.io/cisc288-final-website-helloalice/sitemap.xml

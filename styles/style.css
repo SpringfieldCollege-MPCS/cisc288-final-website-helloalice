@@ -15,14 +15,6 @@
 
 @tailwind utilities;
 
-/* @layer components{
-	.active-link {
-	    @apply text-base text-white font-semibold underline decoration-white underline-offset-4;
-	}
-	.inactive-link {
-	    @apply text-base font-medium text-white hover:text-indigo-50;
-	}
-} */
 
 @layer utilities {
     .full-width {
@@ -34,5 +26,7 @@
         right: 50%;
         width: 100 vw;
     }
+
+    [x-cloak] { display: none !important; }
 }
 

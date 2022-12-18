@@ -1,5 +1,6 @@
 # The URL the site will be built for
-base_url = "https://helloalice.com"
+base_url = "https://springfieldcollege-mpcs.github.io/cisc288-final-website-helloalice"
+# base_url = "https://helloalice.com"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false

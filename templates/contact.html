@@ -1,28 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<main class="full-width -my-8 text-[#606169]">
-		<div class=" bg-[#EAD490] grid grid-cols-1 md:grid-cols-2">
-			<div class="p-8 md:p-20 flex flex-col  place-content-center gap-1 md:gap-2 justify-center">
-				<p class="font-semibold font-customAbril text-[#606169] text-[24px]">How does this work?</p>
-				<p class="text-[#606169] font-customCairo text-[16px]">
-					<p class="leading-[40px]">1. Look through my commissions section to get familiar with my style<br>
-					2. Contact me with the form below with what you’re thinking - I’ll reach back out via email<br>
-					3. We’ll talk about your project and I’ll get you a quote!</p>
-				</p>
-				<p class=" text-[#606169] font-semibold font-customAbril text-[24px]">Shop With Me On FAIRE</a></p>
-				<p>
-					<p class=" text-[#606169] font-customCairo text-[16px]">Are you a retailer looking to purchase items for wholesale? Check me out on <a href="https://www.faire.com/brand/b_ya5xebaxz9" class="italic underline cursor-pointer" target="_blank">FAIRE</a></p>
-				</p>
-			</div>
-			<div class="place-content-center grid grid-cols-4 justify-between items-center ">
-				
-				<div class="py-12 md:py-28 col-start-2 col-span-2">
-					{% set image = resize_image(path='content/contact/BRB.jpg', height=487, width=442, op="scale") %}
-       					<img src="{{ image.url }}" alt="Sticker of BRB"/>
+	<main class="full-width text-[#606169]">
+		<div class="bg-[#EAD490]">
+			<div class="grid grid-cols-1 md:grid-cols-2">
+				<div class="p-8 md:p-20 flex flex-col  place-content-center gap-1 md:gap-2 justify-center">
+					<p class="font-semibold font-customAbril text-[#606169] text-[24px]">How does this work?</p>
+					<p class="text-[#606169] font-customCairo text-[16px]">
+						<p class="leading-[40px]">1. Look through my commissions section to get familiar with my style<br>
+						2. Contact me with the form below with what you’re thinking - I’ll reach back out via email<br>
+						3. We’ll talk about your project and I’ll get you a quote!</p>
+					</p>
+					<p class=" text-[#606169] font-semibold font-customAbril text-[24px]">Shop With Me On FAIRE</a></p>
+					<p>
+						<p class=" text-[#606169] font-customCairo text-[16px]">Are you a retailer looking to purchase items for wholesale? Check me out on <a href="https://www.faire.com/brand/b_ya5xebaxz9" class="italic underline cursor-pointer" target="_blank">FAIRE</a></p>
+					</p>
 				</div>
+				<div class="place-content-center grid grid-cols-4 justify-between items-center ">
+					
+					<div class="py-12 md:py-28 col-start-2 col-span-2">
+						{% set image = resize_image(path='content/contact/BRB.jpg', height=487, width=442, op="scale") %}
+							   <img src="{{ image.url }}" alt="Sticker of BRB"/>
+					</div>
+				</div>
+				
 			</div>
-			
+
 		</div>
 		<div class=" grid grid-cols-1 md:grid-cols-2 items-center">
 			<div class="bg-[#98CFB7] gap-6 flex flex-col place-content-center items-center">
@@ -32,7 +35,7 @@
 				</div>
 				<p class="font-customCabin italic text-[16px]">interested in keeping up with the latest from Hello Alice?</p>
 				<div class="pb-24 md:pb-56">
-					<div class="text-center self-center font-customCabin italic underline text-[16px]"><a href="/newsletter/" class="text-[#606169]">Subscribe to the Newsletter</a></div>
+					<div class="text-center self-center font-customCabin italic underline text-[16px]"><a href="{{config.base_url}}/newsletter/" class="text-[#606169]">Subscribe to the Newsletter</a></div>
 				</div>
 			</div>
 			<div class=" px-12 md:px-24 justify-between items-center">

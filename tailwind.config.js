@@ -3,11 +3,12 @@ module.exports = {
   content: ["./templates/**/*.html", "./theme/**/*.html",  "./themes/", "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
-      backgroundImage: {
-        'hero': "url('/images/GridBanner.jpg')",
-        'paper': "url('/images/Notebookpaper.jpg')",
-        'hpaper': "url('/images/NotebookPaperRotate.jpg')"
-      },
+      // doesnt play well with zola when deployed to subfolders
+      // backgroundImage: {
+      //   'hero': "url('/images/GridBanner.jpg')",
+      //   'paper': "url('/images/Notebookpaper.jpg')",
+      //   'hpaper': "url('/images/NotebookPaperRotate.jpg')"
+      // },
       fontFamily: {
         'customCairo': ['Cairo', 'sans-serif'],
         'customCabin': ['Cabin', 'sans-serif'],

@@ -8,6 +8,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Hello Alice</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="{{config.base_url}}/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{config.base_url}}/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{config.base_url}}/images/favicon-16x16.png">
   <link rel="stylesheet" href="{{ get_url(path="styles/style.css") }}">
   <script src="https://unpkg.com/alpinejs" defer></script>
   <script>
@@ -102,7 +105,7 @@
 <body>
 
   <section>
-    <div class="relative text-[#606169]  container mx-auto -mt-8 overflow-visible">
+    <div class="relative text-[#606169]  container mx-auto overflow-visible">
       {% block header %}
         {{ macros_header::header() }}
       {% endblock header %}

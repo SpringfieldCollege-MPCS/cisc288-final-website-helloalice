@@ -19,7 +19,7 @@
 				
 				<div class="py-12 md:py-28 col-start-2 col-span-2">
 					{% set image = resize_image(path='content/contact/BRB.jpg', height=487, width=442, op="scale") %}
-       					<img src="{{ image.url }}" />
+       					<img src="{{ image.url }}" alt="Sticker of BRB"/>
 				</div>
 			</div>
 			
@@ -28,7 +28,7 @@
 			<div class="bg-[#98CFB7] gap-6 flex flex-col place-content-center items-center">
 				<div class=" pt-24 md:pt-56 overflow-hidden ">
 					{% set image = resize_image(path='content/contact/Resist.jpg', height=468, width=467, op="scale") %}
-       					<img src="{{ image.url }}" class="border rounded-full"/>
+       					<img src="{{ image.url }}" alt="Sticker showcasing Resist" class="border rounded-full"/>
 				</div>
 				<p class="font-customCabin italic text-[16px]">interested in keeping up with the latest from Hello Alice?</p>
 				<div class="pb-24 md:pb-56">
